@@ -1,0 +1,121 @@
+<!--
+	NOTE: This page requires JavaScript!
+	INSTRUCTIONS: Replace "My answer" with your answers. Copy and paste question/answer blocks to add more questions and answers. If you want, you can change the existing questions, too. To write more paragraphs for an answer, add more p tags inside the answer div.
+-->
+
+<!doctype html>
+<html>
+    <head>
+        <title>My Interview Answers</title>
+        <style>
+            /* Below, until you see the closing style tag, is embedded CSS. You can edit this to make the page please your sense of aesthetics. */
+
+            section {
+                /* sections are the boxes that the questions and answers are in */
+                padding: 1rem 3rem;
+                border: 0.1rem solid black;
+				border-radius: 0.5rem;
+                background-color: white;
+            }
+			body > h1, body > p, body > section {
+				/* so that everything on the outside is aligned the same */
+                margin: 1rem;
+			}
+
+			h2 {
+				margin: 0;
+				margin-right: 3rem;
+				min-width: 50%;
+				display: inline-block;
+			}
+			button {
+				display: inline-block;
+			}
+			.answer {
+				margin: 0;
+				display: none; /* JavaScript makes this block or none */
+			}
+        </style>
+    </head>
+
+    <body>
+        <!-- Below is the structure and content of this page. -->
+		<h1>Starting Answers for Interview Questions/Prompts</h1>
+
+		<p>Remember that answers often should be tailored to the role/position!</p>
+		
+		<section>
+			<h2>Tell me about yourself.</h2>
+			<button>Show answer</button>
+			<div class="answer">
+				<p>My answer</p>
+			</div>
+		</section>
+		
+		<section>
+			<h2>What makes you unique?</h2>
+			<button>Show answer</button>
+			<div class="answer">
+				<p>My answer</p>
+			</div>
+		</section>
+		
+		<section>
+			<h2>What are your strengths?</h2>
+			<button>Show answer</button>
+			<div class="answer">
+				<p>My answer</p>
+			</div>
+		</section>
+		
+		<section>
+			<h2>What are your weaknesses?</h2>
+			<button>Show answer</button>
+			<div class="answer">
+				<p>My answer</p>
+			</div>
+		</section>
+		
+		<section>
+			<h2>Describe a time you failed.</h2>
+			<button>Show answer</button>
+			<div class="answer">
+				<p>My answer</p>
+			</div>
+		</section>
+		
+		<section>
+			<h2>Another question</h2>
+			<button>Show answer</button>
+			<div class="answer">
+				<p>My answer</p>
+				<p>Another paragraph</p>
+			</div>
+		</section>
+
+		<!-- SCRIPTS; this can be left alone -->
+		<script type="text/javascript">
+			/*** COLLAPSIBLE SHOW/HIDE FUNCTIONALITY ***/
+			function toggleShowHide() {
+				var content = this.nextElementSibling;
+				if (content.style.display === "block") {
+					content.style.display = "none";
+					// change the button's text
+					this.innerHTML = "Show answer";
+				}
+				else {
+					content.style.display = "block";
+					// change the button's text
+					this.innerHTML = "Hide answer";
+				}
+			}
+			
+			// bind click event handler to the show/hide buttons
+			var toggles = document.getElementsByTagName("button");
+			for (var i = 0; i < toggles.length; i++) {
+				toggles[i].addEventListener("click", toggleShowHide);
+			}
+		</script>
+
+    </body>
+</html>
